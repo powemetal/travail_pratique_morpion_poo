@@ -29,16 +29,15 @@ class Game:
                 break
             self.joueur = "Joueur 2" if self.joueur == "Joueur 1" else "Joueur 1"
         self.restart()
+        
 
     def restart(self):
         while True:
-            recommencer = input("Voulez vous recommencer la partie? (o/n)")
-            if recommencer.lower() in ["o", "oui"]:
+            recommencer = self.console.recommencer()
+            if recommencer:
                 self.reset()
                 self.jeu()
-            elif recommencer.lower() in ["n", "non"]:
-                self.console.afficher_message("\nMerci d'avoir joué!")
                 break
             else:
-                self.console.afficher_message("\nEntree invalide, veuillez entrer (o, oui / n, non)")
-                
+                self.console.afficher_message("\nMerci d'avoir joué!")
+                break

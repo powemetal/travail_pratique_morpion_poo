@@ -23,3 +23,14 @@ class ConsoleUI:
 
     def afficher_message(self, message):
         print(f"{message}")
+
+    def recommencer(self):
+        while True:
+            recommencer = input("\nVoulez vous recommencer la partie? (o/n): ")
+            if recommencer.lower() in ["o", "oui"]:
+                return True
+            elif recommencer.lower() in ["n", "non"]:
+                return False
+            else:
+                print("\nEntree invalide, veuillez entrer (o, oui / n, non)")
+
