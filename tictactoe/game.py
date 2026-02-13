@@ -39,5 +39,5 @@ class Game:
                 self.jeu()
                 break
             else:
-                self.console.afficher_message("\nMerci d'avoir joué!")
+                self.console.afficher_message("\nMerci d'avoir joue!")
                 break
