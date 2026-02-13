@@ -4,4 +4,5 @@ def main():
     partie = Game()
     partie.jeu()
 
-main()
+if __name__ == "__main__":
+    main()
